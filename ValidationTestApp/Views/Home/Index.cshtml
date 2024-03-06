@@ -1,0 +1,22 @@
+﻿@model ValidationTestApp.Models.User
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div>
+    <div class="col-md-4">
+        <h5>Register</h5>
+        <form asp-action="Index" asp-controller="Home">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control pb-3 small" />
+            <span class="text-danger" asp-validation-for="Name"></span><br />
+            <label>E-mail</label>
+            <input asp-for="Email" class="form-control pb-3 small" />
+            <span class="text-danger" asp-validation-for="Email"></span><br />
+            <label>Phone</label>
+            <input asp-for="Phone" class="form-control pb-3 small" />
+            <span class="text-danger" asp-validation-for="Phone"></span><br />
+            <input type="submit" value="Save" class="btn btn-warning" />
+        </form>
+    </div>
+</div>
